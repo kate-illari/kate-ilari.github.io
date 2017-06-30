@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Homework test</title>
+    <script src="https://cdn.jsdelivr.net/lodash/4.17.4/lodash.js"></script>
+    <script src="https://cdn.jsdelivr.net/babel/6.0.20/browser.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<div id="root"></div>
+
+
+<script type="text/html" id="contactslist">
+    <h2><%- title%></h2>
+    <div class="contactsContainer">
+        <% _.forEach(members, function(user) { %>
+        <div class="box">
+            <div class="box-top">
+                <img class="avatar" src="<%= user.avatar %>"/>
+                <a>
+                    <h1><%- user.fullname %></h1>
+                </a>
+            </div>
+
+            <div class="box-bottom">
+                <div class="bottom-phone">
+                    <img src="https://goo.gl/Xe56W9"/>
+                    <a href="tel:<%= user.phone1 %>"><%= user.phone1 %></a>
+                    <a href="tel:<%= user.phone2 %>"><%= user.phone2 %></a>
+                </div>
+                <div class="bottom-address">
+                    <img src="https://goo.gl/339EB9"/>
+                    <span><%= user.addressLine1 %></span>
+                    <span><%= user.addressLine2 %></span>
+                </div>
+                <div class="bottom-mail">
+                    <img src="https://goo.gl/8ZUa27"/>
+                    <a href="mailto: <%= user.email%>"><%= user.email%></a>
+                    <a href="http://<%= user.website%>"><%= user.website%></a>
+                </div>
+            </div>
+        </div>
+    <% }); %>
+    </div>
+</script>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
+

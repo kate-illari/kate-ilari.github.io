@@ -8,7 +8,7 @@
 
     jCarousel.version = '0.3.4';
 
-    var rRelativeTarget = /^([+\-]=)?(.+)$/;
+        var rRelativeTarget = /^([+\-]=)?(.+)$/;
 
     jCarousel.parseTarget = function(target) {
         var relative = false,
@@ -169,6 +169,7 @@
     jCarousel.plugin = function(pluginName, pluginPrototype) {
         var Plugin = $[pluginName] = function(element, options) {
             this._element = $(element);
+            console.log(this._element);
             this.options(options);
 
             this._init();
@@ -254,7 +255,7 @@
             items: function() {
                 return this.list().children();
             },
-            animation:   400,
+            animation:   200,
             transitions: false,
             wrap:        null,
             vertical:    null,
@@ -296,13 +297,13 @@
         _reload: function() {
             this.vertical = this.options('vertical');
 
-            if (this.vertical == null) {
+            if (this.vertical === null) {
                 this.vertical = this.list().height() > this.list().width();
             }
 
             this.rtl = this.options('rtl');
 
-            if (this.rtl == null) {
+            if (this.rtl === null) {
                 this.rtl = (function(element) {
                     if (('' + element.attr('dir')).toLowerCase() === 'rtl') {
                         return true;
@@ -812,8 +813,9 @@
         },
         _prepare: function(item) {
             var index  = this.index(item),
-                idx    = index,
-                wh     = this.dimension(item),
+                idx    = index;
+                debugger;
+                var wh     = this.dimension(item),
                 clip   = this.clipping(),
                 lrb    = this.vertical ? 'bottom' : (this.rtl ? 'left'  : 'right'),
                 center = this.options('center'),
