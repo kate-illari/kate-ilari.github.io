@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JS HOMEWORK 13</title>
+    <script src="https://cdn.jsdelivr.net/lodash/4.17.4/lodash.js"></script>
+    <script src="https://cdn.jsdelivr.net/babel/6.0.20/browser.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+
+  </head>
+  <body>
+
+    <div id="root"></div>
+
+    <script type="text/html" id="questionsList">
+
+      <div class="container">
+      <h1 class="heading"><%- title%></h1>
+      <div class="surveyBlock">
+        <ol><% _.forEach(questions, function(questions) { %>
+        <li class="questionBlock">
+          <h1 class="questionTitle"><%- questions.title %></h1>
+          <ul class="questions"><% _.forEach(questions.answers, function(answers){ %>
+              <li class="questionItem">
+                <label class="checkboxLabel">
+                  <input class="checkbox" type="checkbox">
+                  <%- answers.text %>
+                </label>
+              </li>
+            <% }); %></li>
+           </ul>
+        </li>
+        <% }); %>
+        </ol>
+      </div>
+      <button id="btn" class="button-red" type="submit">Check results</button>
+      </div>
+
+    </script>
+
+    <div id="popup">
+      <div class="popup__content">
+        <span class="popup__close">&times;</span>
+        <span id="popup__text"></span>
+        <div class="popup__buttons">
+          <button class="popup__buttons-green" type="submit">Try again</button>
+        </div>
+      </div>
+    </div>
+
+
+    <script type="text/javascript" src="js/script.js"></script>
+
+  </body>
+</html>
