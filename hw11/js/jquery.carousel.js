@@ -1,7 +1,7 @@
 (function($) {
     "use strict";
 
-    $(function() {
+    $.fn.myPlugin = function() {
 
         var elemWidth = $('.carousel-element').outerWidth(),
             leftBut = $('.carousel-arrow-left'),
@@ -37,7 +37,7 @@
             }
         });
 
-    });
+    };
 
 
 })(jQuery);
