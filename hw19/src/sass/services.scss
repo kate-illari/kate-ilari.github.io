@@ -1,0 +1,82 @@
+.services {
+  background-color: #2a2d32;
+  color: #ffffff;
+  padding: 45px;
+  &-title {
+    font-size: 24px;
+    font-weight: lighter;
+    margin: 20px 0 55px;
+  }
+  &-gallery {
+    display: flex;
+    flex-direction: column;
+    width: 1200px;
+    margin: auto;
+  }
+  &-images {
+    display: flex;
+    justify-content: space-around;
+  }
+  &-img {
+    width: 260px;
+    height: 260px;
+    margin: 0 20px;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &.v1 {
+      background-image: url('../img/services-1.jpg');
+      background-position: 80%;
+    }
+    &.v2 {
+      background-image: url('../img/services-2.jpg');
+    }
+    &.v3 {
+      background-image: url('../img/services-3.jpg');
+    }
+    &.v4 {
+      background-image: url('../img/services-4.jpg');
+    }
+    &-cover {
+      display: none;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #248cec;
+      opacity: .9;
+      background-image: url('../img/plysik.png');
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+  &-imageblock {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  &-imagelink {
+    display: block;
+    height: 100%;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 100;
+    font-family: UbuntuCondenced;
+    &:hover {
+      color: #f4b60d;
+      cursor: pointer;
+      & .services-img-cover {
+        display: block;
+      }
+    }
+  }
+  & span {
+    display: block;
+    margin: 30px auto;
+    font-size: 16px;
+    font-weight: lighter;
+
+  }
+}

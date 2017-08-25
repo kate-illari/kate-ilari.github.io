@@ -1,0 +1,49 @@
+.bottom-container {
+  background-color: #2a2d32;
+  padding: 65px 0 80px 0;
+}
+
+.bottom-nav {
+  font-family: Ubuntu;
+  font-weight: lighter;
+  line-height: 30px;
+  width: 1200px;
+  margin: auto;
+  & h3 {
+    font-weight: 400;
+    font-size: 16px;
+  }
+  &__mainlist{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__list {
+    list-style: none;
+  }
+  &__mainitem {
+    display: inline-block;
+    margin-right: 42px;
+    width: 100%;
+    & :last-child{
+      border-bottom: none;
+    }
+  }
+  &__item {
+    line-height: 30px;
+    border-bottom: 1px solid rgba(225, 225, 225, 0.07);
+  }
+  &__title {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 40px;
+  }
+  &__link{
+    display: block;
+    text-decoration: none;
+    color: rgba(225, 225, 225, 0.3);
+    &:hover{
+      color: #248cec;
+    }
+  }
+}

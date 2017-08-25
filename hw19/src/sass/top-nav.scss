@@ -1,0 +1,47 @@
+.top-nav {
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  background-color: #2a2d32;
+  &__ul {
+    display: table;
+    line-height: 55px;
+  }
+  &__li {
+    display: table-cell;
+    height: 100%;
+
+  }
+  &__link {
+    display: block;
+    height: 100%;
+    font-size: 14px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 100;
+    font-family: UbuntuCondenced;
+    padding: 0 35px;
+    &:hover {
+      color: #f4b60d;
+    }
+    &.active-nav {
+      background-color: #248cec;
+      color: #fff;
+    }
+  }
+  &__search {
+    margin: 0 8px 0 auto;
+    & input {
+      padding: 15px;
+      background: url('../img/search.svg') 90% no-repeat #2a2d32;
+      border: 1px solid black;
+      &:focus {
+        background-color: #cccccc;
+        outline: none;
+        color: #000000;
+        background-image: none;
+      }
+    }
+  }
+}

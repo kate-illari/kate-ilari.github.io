@@ -1,0 +1,33 @@
+header {
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+  & .logo {
+    & a {
+      display: block;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  & .svg-icons {
+    display: flex;
+    justify-self: flex-end;
+    &__link {
+      display: block;
+    }
+    &__link:hover svg path,
+    &__link:hover {
+      cursor: pointer;
+      fill: #248cec;
+      color: #248cec;
+    }
+    & svg {
+      height: 15px;
+      margin: 8px;
+    }
+  }
+}

@@ -1,0 +1,51 @@
+.benefit-container {
+  display: flex;
+  padding: 20px 0;
+  width: 1200px;
+  margin: auto;
+}
+
+.benefit {
+  display: flex;
+  &-number {
+    width: 120px;
+    & span {
+      font-size: 90px;
+      color: rgba(42,43,46,0.1);
+      line-height: 0.8;
+    }
+  }
+  &-content {
+    display: flex;
+    flex-direction: column;
+    width: 240px;
+    &__icon {
+      width: 30px;
+      & .a{
+        fill: #f4b60d;
+      }
+    }
+    &__rm {
+      margin-top: auto;
+      text-decoration: none;
+      color: black;
+      & span {
+        color: #248cec;
+      }
+      &:hover {
+        color: #248cec;
+        cursor: pointer;
+        & span{
+          color: #989fb3;
+        }
+      }
+    }
+    &__title {
+      margin: 20px 0;
+    }
+    &__text {
+      margin-bottom: 20px;
+      color: #8a8a8a;
+    }
+  }
+}
