@@ -29,7 +29,7 @@ SoundsManagerController.prototype = {
 
     if(win > 100){
       me.view.playBigWinSound();
-    } else if(win > 100){
+    } else if(win > 0){
       me.view.playWinSound();
     }
   },
