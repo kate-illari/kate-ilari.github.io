@@ -10,22 +10,22 @@ LineWinController.prototype = {
     var me = this;
 
     me.on({
-      "ServerResponse": me.onServerResponse,
-      "betlines:initWinPresentationCompleted": me.onWinPresentationCompleted
+      "reels:SpinStarted": me.onSpinStarted,
+      "betMultiplier:BetChanged": me.onBetChanged,
+      "betlines:TogglingLine": me.onTogglingLine
     })
   },
 
-  onServerResponse: function (serverResponse) {
-    this.model.storeData('win', serverResponse.win.winBetlines);
+  onTogglingLine: function (line) {
+    this.view.showWinPerLine(line);
   },
 
-  onSpinEnded: function () {
-    var me = this,
-      win = me.model.readData('win');
+  onBetChanged: function () {
+    this.view.hide();
+  },
 
-    if(win > 0){
-      me.view.animateWinBanner(win);
-    }
+  onSpinStarted: function () {
+    this.view.hide();
   }
 
 };

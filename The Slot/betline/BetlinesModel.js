@@ -15,7 +15,7 @@ BetlinesModel.prototype = {
       linesToHighlight = [];
 
     response.win.winBetlines.forEach(function(line){
-      linesToHighlight.push(line.lineIdx);
+      linesToHighlight.push({idx: line.lineIdx, win: line.lineWin});
     });
 
     me.storeData('linesToHighlight', linesToHighlight);

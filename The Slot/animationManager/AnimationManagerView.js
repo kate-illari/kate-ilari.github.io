@@ -7,6 +7,7 @@ function AnimationManagerView(moduleName) {
     "button",
     "betMultiplier",
     "gamePanel",
+    "lineWin",
     "winbanner"
   ];
 }

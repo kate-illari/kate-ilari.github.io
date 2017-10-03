@@ -8,7 +8,7 @@ LineWin.prototype = {
   getDefaultMVCClasses: function () {
     return {
       model: Model,
-      view: View,
+      view: LineWinView,
       controller: LineWinController
     }
   }

@@ -32,6 +32,8 @@ BetMultiplierView.prototype = {
     me.increaseButton = me.addButton(60, 10, 'plus', 'plus-dis');
     me.betIndicator = me.addBetLevelIndicator();
 
+    me.updateLevel(multiplier);
+
     container.addChild(me.decreaseButton, me.txt, me.increaseButton, me.betIndicator);
   },
 
@@ -66,13 +68,6 @@ BetMultiplierView.prototype = {
 
     rect.height = 100;
     rect.width = 100;
-
-    rect.beginFill(0xFFFFFF);
-    rect.lineStyle(1, 0xFFFFFF, 1);
-    rect.drawRect(-5, 25, 70, 5);
-    rect.endFill();
-    rect.beginFill(0xBF7B00);
-    rect.drawRect(-5, 25, rect.width / 10 * multiplier, 5);
 
     return rect;
   },

@@ -39,8 +39,8 @@ BetlinesView.prototype = {
     var me = this,
       linesToHighlight = me.model.readData('linesToHighlight');
 
-    linesToHighlight.forEach(function (idx) {
-      me.playBetline(idx);
+    linesToHighlight.forEach(function (line) {
+      me.playBetline(line.idx);
     });
   },
 

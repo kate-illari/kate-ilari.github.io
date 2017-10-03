@@ -44,15 +44,13 @@ BetlinesController.prototype = {
         (currentBetlineIdx + 1) % linesToHighlight.length :
         0;
 
-    me.view.playBetline(linesToHighlight[nextBetlineIdx]);
+    me.view.playBetline(linesToHighlight[nextBetlineIdx].idx);
     me.model.storeData('betlineAnimating', nextBetlineIdx);
-
+    me.fireEvent('betlines:TogglingLine', linesToHighlight[nextBetlineIdx]);
   },
 
   onServerResponse: function (serverResponse) {
-    var me = this;
-
-    me.model.processServerResponse(serverResponse);
+    this.model.processServerResponse(serverResponse);
   },
 
   onAllReelsStopped: function () {

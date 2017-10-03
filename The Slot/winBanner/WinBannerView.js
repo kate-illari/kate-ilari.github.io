@@ -9,7 +9,8 @@ WinBannerView.prototype = {
   init: function () {
     var me = this,
         root = utils.addContainer('winbanner'),
-        banner = new Banner(root);
+        center = utils.getReelAreaCenter(),
+        banner = new Banner(root, center.x, center.y);
 
     root.visible = false;
 
@@ -19,8 +20,6 @@ WinBannerView.prototype = {
 
   animateWinBanner: function (win) {
     var me = this;
-
-    console.log(me.banner);
 
     me.root.visible = true;
     me.banner.play(win);

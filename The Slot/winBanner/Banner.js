@@ -1,7 +1,5 @@
-function Banner(container) {
+function Banner(container, x, y) {
   Banner.parent.constructor.apply(this, arguments);
-
-  var center = utils.getReelAreaCenter();
 
   this.state = 'idle';
   this.bannerBg = this.createGraphics();
@@ -11,7 +9,7 @@ function Banner(container) {
   this.scaleIncrement = 0.01;
   this.alpha = 0;
   this.visible = false;
-  this.position.set(center.x, center.y);
+  this.position.set(x, y);
   this.bannerBg.maxWidth = this.bannerBg.width + 30;
   this.bannerBg.maxHeight = this.bannerBg.height + 30;
 
@@ -27,12 +25,11 @@ Banner.prototype = {
 
   createGraphics: function () {
     var bannerBg = new PIXI.Graphics(),
-      rectWidth = 300,
-      rectHeigth = 150,
+      rectWidth = 280,
+      rectHeigth = 80,
       rectRad = 10;
 
-    bannerBg.lineStyle(2, 0x000000, 1);
-    bannerBg.beginFill(0xFFFFFF, 1);
+    bannerBg.beginFill(0x000000, 0.7);
     bannerBg.drawRoundedRect( -rectWidth / 2, -rectHeigth / 2, rectWidth, rectHeigth, rectRad);
     bannerBg.endFill();
 
@@ -40,7 +37,12 @@ Banner.prototype = {
   },
 
   createText: function () {
-    var txt = new PIXI.Text('');
+    var style = new PIXI.TextStyle({
+          fill:'#ffffff',
+          fontFamily: 'Verdana'
+        }),
+        txt = new PIXI.Text('', style);
+
     txt.x = 0;
     txt.y = 0;
     txt.anchor.set(0.5, 0.5);

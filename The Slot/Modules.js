@@ -5,6 +5,7 @@ var modules = [
     "BetMultiplier",
     "GamePanel",
     "WinBanner",
+    "LineWin",
     "SpinButton",
     "Reels",
     "Betlines",
