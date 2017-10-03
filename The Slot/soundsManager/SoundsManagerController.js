@@ -13,26 +13,37 @@ SoundsManagerController.prototype = {
     me.on({
       "reels:SpinStarted": me.onSpinStarted,
       "betMultiplier:BetChanged": me.onBetMultiplierChange,
-      "reels:ReelStopped": me.onReelStopped
+      "reels:ReelStopped": me.onReelStopped,
+      "ServerResponse": me.onServerResponse,
+      "reels:SpinEnded": me.onSpinEnded
     })
   },
 
-  onSpinStarted: function () {
-    var spinStartSound = new Audio('audio/StartSpin.mp3');
+  onServerResponse: function (serverResponse) {
+    this.model.storeData('win', serverResponse.win.totalWin);
+  },
 
-    spinStartSound.play();
+  onSpinEnded: function () {
+    var me = this,
+      win = me.model.readData('win');
+
+    if(win > 100){
+      me.view.playBigWinSound();
+    } else if(win > 100){
+      me.view.playWinSound();
+    }
+  },
+
+  onSpinStarted: function () {
+    this.view.playSpinStartSound()
   },
 
   onBetMultiplierChange: function () {
-    var betChangeSound = new Audio('audio/pop.mp3');
-
-    betChangeSound.play();
+    this.view.playBetChangeSound()
   },
 
   onReelStopped: function () {
-    var reelStopSound = new Audio('audio/reelStop.mp3');
-
-    reelStopSound.play();
+    this.view.playReelStopSound()
   }
 
 };
