@@ -124,9 +124,6 @@
         <option value="$PROJECT_DIR$/soundsManager/SoundsManagerController.js" />
         <option value="$PROJECT_DIR$/winBanner/Banner.js" />
         <option value="$PROJECT_DIR$/winBanner/WinBannerView.js" />
-        <option value="$PROJECT_DIR$/LineWin/LineWinView.js" />
-        <option value="$PROJECT_DIR$/LineWin/LineWinController.js" />
-        <option value="$PROJECT_DIR$/LineWin/LineWin.js" />
         <option value="$PROJECT_DIR$/Modules.js" />
         <option value="$PROJECT_DIR$/utils/utils.js" />
         <option value="$PROJECT_DIR$/animationManager/AnimationManagerView.js" />
