@@ -3,17 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1f7ea5c7-78f3-4649-92b5-7d48a358a804" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Modules.js" afterPath="$PROJECT_DIR$/Modules.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/animationManager/AnimationManagerView.js" afterPath="$PROJECT_DIR$/animationManager/AnimationManagerView.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/config.js" afterPath="$PROJECT_DIR$/config/config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lineWin/LineWinView.js" afterPath="$PROJECT_DIR$/lineWin/LineWinView.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reels/Reel.js" afterPath="$PROJECT_DIR$/reels/Reel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reels/SymbolsList.js" afterPath="$PROJECT_DIR$/reels/SymbolsList.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/soundsManager/SoundsManagerView.js" afterPath="$PROJECT_DIR$/soundsManager/SoundsManagerView.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/Symbol.js" afterPath="$PROJECT_DIR$/utils/Symbol.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/utils.js" afterPath="$PROJECT_DIR$/utils/utils.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/winBanner/Banner.js" afterPath="$PROJECT_DIR$/winBanner/Banner.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -40,11 +30,21 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="WinSymbolsView.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="WinSymbolsView.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/winSymbols/WinSymbolsView.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="420">
-                  <caret line="80" column="42" lean-forward="false" selection-start-line="80" selection-start-column="42" selection-end-line="80" selection-end-column="42" />
+                <state relative-caret-position="1632">
+                  <caret line="96" column="5" lean-forward="false" selection-start-line="96" selection-start-column="5" selection-end-line="96" selection-end-column="5" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="SoundsManagerView.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/soundsManager/SoundsManagerView.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="357">
+                  <caret line="21" column="28" lean-forward="true" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
                   <folding />
                 </state>
               </provider>
@@ -117,7 +117,7 @@
           <file leaf-file-name="config.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/config/config.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="720">
+                <state relative-caret-position="722">
                   <caret line="91" column="19" lean-forward="false" selection-start-line="91" selection-start-column="19" selection-end-line="91" selection-end-column="19" />
                   <folding />
                 </state>
@@ -221,7 +221,6 @@
         <option value="$PROJECT_DIR$/lineWin/LineWin.js" />
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/gameAreaDimmer/Dimmer.js" />
-        <option value="$PROJECT_DIR$/soundsManager/SoundsManagerView.js" />
         <option value="$PROJECT_DIR$/lineWin/LineWinController.js" />
         <option value="$PROJECT_DIR$/utils/utils.js" />
         <option value="$PROJECT_DIR$/winBanner/Banner.js" />
@@ -238,8 +237,9 @@
         <option value="$PROJECT_DIR$/animationManager/AnimationManagerView.js" />
         <option value="$PROJECT_DIR$/reels/ReelsController.js" />
         <option value="$PROJECT_DIR$/winSymbols/WinSymbolsController.js" />
-        <option value="$PROJECT_DIR$/winSymbols/WinSymbolsView.js" />
         <option value="$PROJECT_DIR$/config/config.js" />
+        <option value="$PROJECT_DIR$/winSymbols/WinSymbolsView.js" />
+        <option value="$PROJECT_DIR$/soundsManager/SoundsManagerView.js" />
       </list>
     </option>
   </component>
@@ -551,7 +551,7 @@
       <option name="presentableId" value="Default" />
       <updated>1507040289743</updated>
       <workItem from="1507040291585" duration="2983000" />
-      <workItem from="1507044151803" duration="40384000" />
+      <workItem from="1507044151803" duration="40677000" />
     </task>
     <task id="LOCAL-00001" summary="'fixed LineWin folder'">
       <created>1507061319625</created>
@@ -564,7 +564,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43367000" />
+    <option name="totallyTimeSpent" value="43660000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-332" y="-1058" width="1920" height="1054" extended-state="6" />
@@ -577,7 +577,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09770688" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24725823" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -743,14 +743,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="16" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/soundsManager/SoundsManagerView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="4" lean-forward="true" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
           <folding />
         </state>
       </provider>
@@ -959,18 +951,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/winSymbols/WinSymbolsView.js">
+    <entry file="file://$PROJECT_DIR$/config/config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="80" column="42" lean-forward="false" selection-start-line="80" selection-start-column="42" selection-end-line="80" selection-end-column="42" />
+        <state relative-caret-position="722">
+          <caret line="91" column="19" lean-forward="false" selection-start-line="91" selection-start-column="19" selection-end-line="91" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/config.js">
+    <entry file="file://$PROJECT_DIR$/winSymbols/WinSymbolsView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="91" column="19" lean-forward="false" selection-start-line="91" selection-start-column="19" selection-end-line="91" selection-end-column="19" />
+        <state relative-caret-position="1632">
+          <caret line="96" column="5" lean-forward="false" selection-start-line="96" selection-start-column="5" selection-end-line="96" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/soundsManager/SoundsManagerView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="28" lean-forward="true" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
           <folding />
         </state>
       </provider>

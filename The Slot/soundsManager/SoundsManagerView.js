@@ -16,7 +16,7 @@ SoundsManagerView.prototype = {
     me.winSound = new Audio('audio/Win.mp3');
     me.bigWinSound = new Audio('audio/BigWin.mp3');
 
-    // me.playBgSound();
+    me.playBgSound();
   },
 
   playBgSound: function () {
