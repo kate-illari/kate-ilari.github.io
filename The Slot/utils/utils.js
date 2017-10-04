@@ -35,17 +35,17 @@ var utils = {
     return symConfig;
   },
 
-  getReelAreaCenter: function () {
-    var initialX = config.reelsContainerPosition.x,
-        initialY = config.reelsContainerPosition.y,
-        reelWidth = config.symbol.width + config.symbol.offset,
-        symsHeight = config.symbol.height + config.symbol.offset,
-        reelsAmt = config.reels.length,
-        visibleSyms = [],
-        reelAreaWidth,
-        reelAreaHeight,
-        maxSymsAmt,
-        i = 0;
+  getReelAreaParams: function () {
+    var x = config.reelsContainerPosition.x,
+      y = config.reelsContainerPosition.y,
+      reelWidth = config.symbol.width + config.symbol.offset,
+      symsHeight = config.symbol.height + config.symbol.offset,
+      reelsAmt = config.reels.length,
+      visibleSyms = [],
+      reelAreaWidth,
+      reelAreaHeight,
+      maxSymsAmt,
+      i = 0;
 
     for(; i < reelsAmt; i++){
       visibleSyms.push(config.reels[i].visibleSyms)
@@ -55,7 +55,39 @@ var utils = {
     reelAreaWidth = reelWidth * reelsAmt;
     reelAreaHeight = symsHeight * maxSymsAmt;
 
-    return {x: initialX + reelAreaWidth / 2, y: initialY + reelAreaHeight / 2}
+    return {x: x, y: y, height: reelAreaHeight, width: reelAreaWidth}
+  },
+
+  getReelAreaCenter: function () {
+    // var initialX = config.reelsContainerPosition.x,
+    //     initialY = config.reelsContainerPosition.y,
+    //     reelWidth = config.symbol.width + config.symbol.offset,
+    //     symsHeight = config.symbol.height + config.symbol.offset,
+    //     reelsAmt = config.reels.length,
+    //     visibleSyms = [],
+    //     reelAreaWidth,
+    //     reelAreaHeight,
+    //     maxSymsAmt,
+    //     i = 0;
+    //
+    // for(; i < reelsAmt; i++){
+    //   visibleSyms.push(config.reels[i].visibleSyms)
+    // }
+    //
+    // maxSymsAmt = Math.max.apply(null, visibleSyms);
+    // reelAreaWidth = reelWidth * reelsAmt;
+    // reelAreaHeight = symsHeight * maxSymsAmt;
+    //
+    // return {x: initialX + reelAreaWidth / 2, y: initialY + reelAreaHeight / 2}
+
+    var initialX = utils.getReelAreaParams().x,
+        initialY = utils.getReelAreaParams().y,
+        reelAreaWidth = utils.getReelAreaParams().width,
+        reelAreaHeight = utils.getReelAreaParams().height,
+        x = initialX + reelAreaWidth / 2,
+        y = initialY + reelAreaHeight / 2;
+
+    return {x: x, y: y}
   }
 
 };

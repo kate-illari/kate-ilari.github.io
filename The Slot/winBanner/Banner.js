@@ -2,7 +2,7 @@ function Banner(container, x, y) {
   Banner.parent.constructor.apply(this, arguments);
 
   this.state = 'idle';
-  this.bannerBg = this.createGraphics();
+  // this.bannerBg = this.createGraphics();
   this.text = this.createText();
   this.alphaIncrement = 0.05;
   this.scaleFactor = 1;
@@ -10,10 +10,11 @@ function Banner(container, x, y) {
   this.alpha = 0;
   this.visible = false;
   this.position.set(x, y);
-  this.bannerBg.maxWidth = this.bannerBg.width + 30;
-  this.bannerBg.maxHeight = this.bannerBg.height + 30;
+  // this.bannerBg.maxWidth = this.bannerBg.width + 30;
+  // this.bannerBg.maxHeight = this.bannerBg.height + 30;
 
-  this.addChild(this.bannerBg, this.text);
+  // this.addChild(this.bannerBg);
+  this.addChild(this.text);
   container.addChild(this);
 
   utils.addToRenderLoop(this.update.bind(this));
@@ -25,7 +26,7 @@ Banner.prototype = {
 
   createGraphics: function () {
     var bannerBg = new PIXI.Graphics(),
-      rectWidth = 280,
+      rectWidth = 400,
       rectHeigth = 80,
       rectRad = 10;
 
@@ -39,7 +40,14 @@ Banner.prototype = {
   createText: function () {
     var style = new PIXI.TextStyle({
           fill:'#ffffff',
-          fontFamily: 'Verdana'
+          fontFamily: 'Verdana',
+          stroke: 'red',
+          fontSize: 40,
+          fontWeight: 'bold',
+          dropShadow: true,
+          dropShadowBlur: 15,
+          dropShadowDistance: 0,
+          dropShadowColor: 'white'
         }),
         txt = new PIXI.Text('', style);
 

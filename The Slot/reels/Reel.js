@@ -3,7 +3,7 @@ function Reel(idx, container, stopReelCallback) {
   this.symbolsList = new SymbolsList(idx, this, stopReelCallback);
   this.position.x = (idx * config.symbol.width) + (idx * config.symbol.offset);
   this.position.y = config.reels[idx].verticalOffset;
-  this.width = config.symbol.width + config.symbol.offset;
+  this.width = config.symbol.width;
   this.visibleSymsArea = (config.symbol.height + config.symbol.offset) * config.reels[idx].visibleSyms;
   this.mask = this.addMask(this.width, this.visibleSymsArea);
 

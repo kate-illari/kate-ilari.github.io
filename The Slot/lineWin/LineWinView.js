@@ -9,31 +9,50 @@ LineWinView.prototype = {
   init: function () {
     var me = this,
         root = utils.addContainer('lineWin'),
+        // textBg = me.drawTextBg(root),
         text = me.initText(root);
 
-    root.addChild(text);
     root.visible = false;
+    root.position.x = utils.getReelAreaCenter().x;
 
     me.root = root;
     me.text = text;
+    // me.textBg = textBg;
   },
 
-  initText: function () {
+  initText: function (container) {
     var style = new PIXI.TextStyle({
           fill: ['#ffffff', '#ffff00', '#ffa500', '#d53369'],
           stroke: 'brown',
           strokeThickness: 3,
-          fontSize: 40,
+          fontSize: 38,
           fontWeight: 'bold',
-          fontFamily: 'Verdana'
+          fontFamily: 'Verdana',
+          dropShadow: true,
+          dropShadowBlur: 15,
+          dropShadowDistance: 0
         }),
         txt;
 
     txt = new PIXI.Text('', style);
     txt.anchor.set(0.5, 0.5);
-    txt.position.x = utils.getReelAreaCenter().x;
 
+    container.addChild(txt);
     return txt;
+  },
+
+  drawTextBg: function (container) {
+    var txtBg = new PIXI.Graphics(),
+      rectWidth = 120,
+      rectHeight = 75,
+      rectRad = 10;
+
+    txtBg.beginFill(0xffffff, 0.7);
+    txtBg.drawRoundedRect( -rectWidth / 2, -rectHeight / 2, rectWidth, rectHeight, rectRad);
+    txtBg.endFill();
+
+    container.addChild(txtBg);
+    return txtBg;
   },
 
   showWinPerLine: function (winBetline) {
@@ -41,9 +60,9 @@ LineWinView.prototype = {
         centerSym = config.betlines[winBetline.idx][2],
         y = utils.getSymConfig(2, centerSym).centerY;
 
-    me.root.visible = true;
     me.text.text = winBetline.win;
-    me.text.position.y = y;
+    me.root.position.y = y;
+    me.root.visible = true;
   },
 
   hide: function () {

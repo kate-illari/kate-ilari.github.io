@@ -3,7 +3,9 @@ function AnimationManagerView(moduleName) {
   this.layers = [
     "background",
     "reels",
+    "dimmer",
     "betlines",
+    "wimSymbols",
     "button",
     "betMultiplier",
     "gamePanel",
