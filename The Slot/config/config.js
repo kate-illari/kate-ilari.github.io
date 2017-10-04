@@ -19,11 +19,11 @@ var config = {
   buttonPushStrength: 3.5,
   spinbutton: {
     x: 1000,
-    y: 400,
+    y: 400
   },
   symbol: {
     height: 100,
-    width: 120,
+    width: 140,
     offset: 20
   },
   reels: [

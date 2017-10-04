@@ -9,7 +9,6 @@ function SymbolsList(idx, container, stopReelCallback) {
   this.symsListLength = this.reel.reelStrip.length + this.visibleSymsAmt;
   this.symsHeight = config.symbol.height + config.symbol.offset;
   this.position.y = this.visibleArea - (this.symsListLength * this.symsHeight);
-  this.width = config.symbol.width + config.symbol.offset;
   this.stopReelCallback = stopReelCallback;
 
   this.symsArr = this.getSymbols(this.reel.reelStrip);
@@ -28,7 +27,6 @@ SymbolsList.prototype = {
     allSyms.forEach(function (sym, idx) {
       symbolsArr.push(new Symbol({
         symIdx: idx,
-        symHeight: config.symbol.height,
         img: sym,
         container: me
       }));

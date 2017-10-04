@@ -7,6 +7,8 @@ var modules = [
     "WinBanner",
     "LineWin",
     "SpinButton",
+    "WinSymbols",
+    "Dimmer",
     "Reels",
     "Betlines",
     "Background"
