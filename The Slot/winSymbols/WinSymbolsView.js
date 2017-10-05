@@ -8,7 +8,7 @@ WinSymbolsView.prototype = {
 
   init: function () {
     var me = this,
-      root = utils.addContainer('wimSymbols');
+        root = utils.addContainer('wimSymbols');
 
     root.visible = false;
     me.root = root;
@@ -16,11 +16,11 @@ WinSymbolsView.prototype = {
 
   drawSym: function (x, y, img) {
     var me = this,
-        sym = new Symbol({
-          symIdx: 0,
-          img: img,
-          container: me.root
-        });
+      sym = new Symbol({
+        symIdx: 0,
+        img: img,
+        container: me.root
+      });
 
     sym.position.x = x;
     sym.position.y = y;
@@ -33,33 +33,32 @@ WinSymbolsView.prototype = {
   drawAllSyms: function (winBetlines, topSyms) {
     this.root.removeChildren();
 
-      var me = this,
-          allDrawnSyms = [];
+    var me = this,
+        allDrawnSyms = [];
 
-      topSyms.forEach(function (sym, reelIdx) {
-        var reelSymbols = config.reels[reelIdx].reelStrip,
-            reelLength = config.reels[reelIdx].visibleSyms,
-            drawnSymReel = [],
-            drawnSym;
+    topSyms.forEach(function (sym, reelIdx) {
+      var reelSymbols = config.reels[reelIdx].reelStrip,
+          visibleSymsAmt = config.reels[reelIdx].visibleSyms,
+          drawnSymReel = [],
+          drawnSym;
 
-        for(var i = 0; i < reelLength; i++){
-          var nextSym = sym + i,
-              symIdx = nextSym < reelSymbols.length ?
-                nextSym :
-                nextSym % reelSymbols.length,
-              symPosition = utils.getSymConfig(reelIdx, i);
+      for (var i = 0; i < visibleSymsAmt; i++) {
+        var nextSym = sym + i,
+            symIdx = nextSym < reelSymbols.length ?
+              nextSym :
+              nextSym % reelSymbols.length,
+            symPosition = utils.getSymConfig(reelIdx, i);
 
-          drawnSym = me.drawSym(symPosition.left, symPosition.top, reelSymbols[symIdx]);
-          drawnSymReel.push(drawnSym);
-        }
-        allDrawnSyms.push(drawnSymReel);
-      });
+        drawnSym = me.drawSym(symPosition.left, symPosition.top, reelSymbols[symIdx]);
+        drawnSymReel.push(drawnSym);
+      }
+      allDrawnSyms.push(drawnSymReel);
+    });
     this.allDrawnSyms = allDrawnSyms;
   },
 
-  showAllWinSyms: function (result) {
-    var me = this,
-        winBetlines = result.win.winBetlines;
+  showAllWinSyms: function (winBetlines) {
+    var me = this;
 
     this.root.visible = true;
 
@@ -73,13 +72,13 @@ WinSymbolsView.prototype = {
 
   toggleWinBetline: function (togglingLine) {
     var me = this,
-        winBetlines = me.model.readData('win').win.winBetlines,
+        winBetlines = me.model.readData('winBetlines'),
         symsCount;
 
     me.root.visible = true;
 
-    winBetlines.forEach(function(betline){
-      if(betline.lineIdx === togglingLine.idx){
+    winBetlines.forEach(function (betline) {
+      if (betline.lineIdx === togglingLine.idx) {
         symsCount = betline.symsCount;
       }
     });
@@ -90,7 +89,7 @@ WinSymbolsView.prototype = {
       });
     });
 
-    for(var i = 0; i < symsCount; i++){
+    for (var i = 0; i < symsCount; i++) {
       var symIdx = config.betlines[togglingLine.idx][i];
 
       me.allDrawnSyms[i][symIdx].visible = true;

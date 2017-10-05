@@ -10,8 +10,8 @@ BetMultiplierView.prototype = {
       root = utils.addContainer('betMultiplier');
 
     root.position.x = config.gamePanelPosition.betMultiplierX;
-
     root.position.y = config.gamePanelPosition.y;
+
     me.drawMultiplierElements(root);
 
     me.increaseButton.buttonUpCallBack = function () {
@@ -120,6 +120,16 @@ BetMultiplierView.prototype = {
     me.updateLevel(multiplier);
     me.model.storeData('multiplier', multiplier);
     me.fireEvent('view:betChanged', multiplier);
+  },
+
+  disableBetChange: function () {
+    this.increaseButton.disable();
+    this.decreaseButton.disable();
+  },
+
+  enableBetChange: function () {
+    this.increaseButton.enable();
+    this.decreaseButton.enable();
   }
 
 

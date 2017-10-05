@@ -10,12 +10,22 @@ BetMultiplierController.prototype = {
     var me = this;
 
     me.on({
-      "view:betChanged": me.onBetChanged
+      "view:betChanged": me.onBetChanged,
+      "reels:SpinEnded": me.onSpinEnded,
+      "reels:SpinStarted": me.onSpinStarted
     })
   },
 
   onBetChanged: function (multiplier) {
     this.fireEvent('betMultiplier:BetChanged', multiplier);
+  },
+
+  onSpinEnded: function () {
+    this.view.enableBetChange();
+  },
+
+  onSpinStarted: function () {
+    this.view.disableBetChange();
   }
 
 };

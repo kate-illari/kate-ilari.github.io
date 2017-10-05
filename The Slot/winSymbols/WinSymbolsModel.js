@@ -6,8 +6,11 @@ function WinSymbolsModel(moduleName) {
 WinSymbolsModel.prototype = {
   constructor: WinSymbolsModel,
 
-  setupData: function () {
+  processServerResponse: function (response) {
+    var me = this,
+        winBetlines = response.win.winBetlines;
 
+    me.storeData('winBetlines', winBetlines);
   }
 
 };

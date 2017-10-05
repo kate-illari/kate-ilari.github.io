@@ -19,12 +19,17 @@ WinSymbolsController.prototype = {
   },
 
   onServerResponse: function (response) {
-    this.model.storeData('win', response);
-    this.view.drawAllSyms(response.win.winBetlines, response.symsToStopOn)
+    var me = this;
+
+    me.model.processServerResponse(response);
+    me.view.drawAllSyms(response.win.winBetlines, response.symsToStopOn)
   },
 
   onSpinEnded: function () {
-    this.view.showAllWinSyms(this.model.readData('win'));
+    var me = this,
+        winBetlines = me.model.readData('winBetlines');
+
+    me.view.showAllWinSyms(winBetlines);
   },
 
   onTogglingLine: function (line) {
