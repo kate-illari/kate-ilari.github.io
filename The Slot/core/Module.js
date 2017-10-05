@@ -9,14 +9,3 @@ Module.prototype.getDefaultMVCClasses = function () {
         controller: Controller
     }
 };
-
-/*var modName = "Module";
-
-new window[nodName]();
-
-var modulesToLoad = ["ButtonModule", "TextFieldModule"];
-
-
-
-var test  = new Module();
-console.error(test);*/

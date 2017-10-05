@@ -16,15 +16,19 @@ SoundsManagerView.prototype = {
     me.winSound = new Audio('audio/Win.mp3');
     me.bigWinSound = new Audio('audio/BigWin.mp3');
 
-    me.playBgSound();
+    me.toggleBgSound();
   },
 
-  playBgSound: function () {
+  toggleBgSound: function () {
     var me = this;
 
     me.backgroundSound.volume = 0.4;
     me.backgroundSound.loop = true;
-    me.backgroundSound.play();
+    if(me.backgroundSound.paused){
+      me.backgroundSound.play();
+    } else {
+      me.backgroundSound.pause();
+    }
   },
 
   playSpinStartSound: function () {

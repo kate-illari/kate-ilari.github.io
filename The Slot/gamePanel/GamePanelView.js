@@ -24,15 +24,17 @@ GamePanelView.prototype = {
         y = config.gamePanelPosition.y,
         betX = config.gamePanelPosition.betX,
         balanceX = config.gamePanelPosition.balanceX,
-        winX = config.gamePanelPosition.winX;
+        winX = config.gamePanelPosition.winX,
+        betMult = config.initialBetMultiplier;
 
-    me.betMult = config.initialBetMultiplier;
     me.balanceAmt = config.initialBalance;
-    me.betAmt = config.reels.length * me.betMult;
+    me.betAmt = config.reels.length * betMult;
 
     me.bet = me.addText(betX, y, 'Bet: ' + me.betAmt);
     me.balance = me.addText(balanceX, y, 'Balance: ' + me.balanceAmt);
     me.win = me.addText(winX, y, 'Win: 0');
+
+
 
     container.addChild(me.bet, me.balance, me.win);
   },

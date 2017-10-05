@@ -13,7 +13,10 @@ var textures = {
     "plus": 'images/plus1.png',
     "plus-dis": 'images/plusD1.png',
     "minus": 'images/minus1.png',
-    "minus-dis": 'images/minusD1.png'
+    "minus-dis": 'images/minusD1.png',
+    "info": 'images/Info.png',
+    "music": 'images/music.png',
+    "arrow": 'images/arrow.png'
   },
   imgConfig = {
     getAllImages: function () {

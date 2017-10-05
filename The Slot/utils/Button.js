@@ -6,7 +6,7 @@ function Button(buttonParams) {
 
   this.sprite = new PIXI.Sprite();
   this.sprite.texture = this.activeTexture;
-  this.sprite.position.set(buttonParams.x, buttonParams.y);
+  this.position.set(buttonParams.x, buttonParams.y);
   this.sprite.anchor.set(0.5, 0.5);
   this.sprite.alpha = 0.7;
   this.enabled = true;

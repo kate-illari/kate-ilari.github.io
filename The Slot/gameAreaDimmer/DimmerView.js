@@ -30,7 +30,7 @@ DimmerView.prototype = {
     return bg;
   },
 
-  startDimmer: function () {
+  show: function () {
     this.root.visible = true;
   },
 

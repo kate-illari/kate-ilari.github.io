@@ -13,7 +13,7 @@ DimmerController.prototype = {
       "ServerResponse": me.onServerResponse,
       "reels:SpinEnded": me.onSpinEnded,
       "reels:SpinStarted": me.onSpinStarted,
-      "betMultiplier:BetChanged": me.onBetChanged
+      "betMultiplier:BetChanged": me.onBetChanged,
     })
   },
 
@@ -26,7 +26,7 @@ DimmerController.prototype = {
         win = me.model.readData('win');
 
     if(win > 0){
-      me.view.startDimmer();
+      me.view.show();
     }
   },
 

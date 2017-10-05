@@ -9,8 +9,10 @@ function AnimationManagerView(moduleName) {
     "button",
     "betMultiplier",
     "gamePanel",
+    "settings",
     "lineWin",
-    "winbanner"
+    "winbanner",
+    "paytable"
   ];
 }
 

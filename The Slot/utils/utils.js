@@ -88,7 +88,20 @@ var utils = {
         y = initialY + reelAreaHeight / 2;
 
     return {x: x, y: y}
-  }
+  },
+
+  initInfoButton: function (container, x, y, image) {
+    var params = {
+        x: x,
+        y: y,
+        img: image,
+        imgDis: image
+      },
+      button = new Button(params);
+
+    container.addChild(button);
+    return button
+  },
 
 };
 

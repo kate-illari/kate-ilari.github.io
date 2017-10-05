@@ -15,7 +15,8 @@ SoundsManagerController.prototype = {
       "betMultiplier:BetChanged": me.onBetMultiplierChange,
       "reels:ReelStopped": me.onReelStopped,
       "ServerResponse": me.onServerResponse,
-      "reels:SpinEnded": me.onSpinEnded
+      "reels:SpinEnded": me.onSpinEnded,
+      "settings:MusicPressed": me.onMusicPressed
     })
   },
 
@@ -44,6 +45,10 @@ SoundsManagerController.prototype = {
 
   onReelStopped: function () {
     this.view.playReelStopSound()
+  },
+
+  onMusicPressed: function () {
+    this.view.toggleBgSound()
   }
 
 };

@@ -18,8 +18,8 @@ var config = {
   },
   buttonPushStrength: 3.5,
   spinbutton: {
-    x: 1000,
-    y: 400
+    x: 1050,
+    y: 340
   },
   symbol: {
     height: 100,
